@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div class="navbar">
+            <img src="pic/logo.png" class="logo">
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="myWorks.html">MY WORKS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="pic/images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1>About Me</h1>
+                        <p>Hi there! I'm Christian, a passionate web developer 
+                            and designer with a keen eye for detail and a love for 
+                            creating visually stunning and highly functional websites. 
+                            With over 2 years of experience in the industry, 
+                            I've had the privilege of working on a diverse range of projects, 
+                            each presenting its own unique challenges and opportunities for creativity.</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links act-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents act-tab" id="skills">
+                                <ul>
+                                    <li><span>UI/UX Design</span><br>Front-end Development</li>
+                                    <li><span>Web Development</span><br>Web App Development</li>
+                                    <li><span>App Development</span><br>Building Android/iOS</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2021 - Current </span><br>Front-end Development at DHVSU</li>
+                                    <li><span>2019 - 2021</span><br>Team lead at San Juan Inc.</li>
+                                    <li><span>2017 - 2019</span><br>UI/UX Design Executive at ANHS Digital Ltd.</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2016 </span><br>UI/UX Design Training at North Institute</li>
+                                    <li><span>2016</span><br>MBA from RCC Buensuceso</li>
+                                    <li><span>2014</span><br>BBA from FCC Arenas</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("act-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("act-tab");
+                }
+                event.currentTarget.classList.add("act-link")
+                document.getElementById(tabname).classList.add("act-tab")
+        
+            }
+
+        </script>
+</body>
+</html>
